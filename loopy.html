@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        table {
+            border: 1px solid #333;
+            float: left;
+            margin-right: 8px;
+        }
+        td {
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div id="times-table"></div>
+    
+    <script type="text/javascript">
+        let html = ''
+        for (let i = 1; i <= 10; i++) {
+            html += `
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="5">
+                                ${i}'s Table
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                `
+            for (let j = 1; j <= 10; j++) {
+                html += `
+                    <tr>
+                        <td>
+                            ${i}
+                        </td>
+                        <td>x</td>
+                        <td>
+                            ${j}
+                        </td>
+                        <td>=</td>
+                        <td>
+                            ${i * j}
+                        </td>
+                    </tr>
+                `
+            }
+            html += `
+                    </tbody>
+                </table>
+            `
+            
+            // Helpful for assignment 02.
+            // if (i % 3 === 0) {
+            //     console.log(`${i} is divisible by 3`)
+            // }
+            // if (i % 5 === 0) {
+            //     console.log(`${i} is divisible by 5`)
+            // }
+        }
+        var timesTable = document.getElementById('times-table')
+        timesTable.innerHTML = html
+    </script>
+</body>
+</html>

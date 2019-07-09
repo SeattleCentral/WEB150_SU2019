@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+    <button id="start">Start</button>
+    
+    <script type="text/javascript">
+        var button = document.getElementById('start')
+        button.addEventListener('click', function() {
+            var correctAnswer = Math.floor(Math.random() * 100) + 1
+            console.log(correctAnswer)
+            var userGuess = null
+            var guesses = 0
+            while (correctAnswer != userGuess) {
+                userGuess = prompt('What is the value?')
+                guesses += 1
+                console.log(guesses)
+                if (userGuess == correctAnswer) {
+                    alert('You guessed it!')
+                } else if ((userGuess - correctAnswer) > 30) {
+                    alert('Way way too high!')
+                } else if ((userGuess - correctAnswer) > 15) {
+                    alert('Way too high')
+                } else if ((correctAnswer - userGuess) > 30) {
+                    alert('Way way to low')
+                } else if((correctAnswer - userGuess) > 15) {
+                    alert('way to low')
+                } else if (userGuess > correctAnswer) {
+                    alert('Too high')
+                } else if (userGuess < correctAnswer) {
+                    alert('Too low')
+                }
+            }
+        })
+        
+    </script>
+</body>
+</html>

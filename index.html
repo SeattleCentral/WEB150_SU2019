@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My JavaScript Test</title>
+</head>
+<body>
+    <h1 id="page-header">
+        Loading...
+    </h1>
+    
+    <script type="text/javascript">
+        var myName = "Joshua"
+        var header = document.getElementById("page-header")
+        // concatenation
+        header.innerHTML = myName + " is cool."
+        // interpolation
+        var numberString = "75"
+        var numberNumber = 75
+        var booleanValue = false
+        var myObject = {}
+        
+        // $.post('http://mysite.com/api/createThing')
+        var response = {
+            "version": "1.0.0",
+            "packageName": "myTestData"
+        }
+        console.log('The server is running version: ' + response.version)
+        console.log('This is SPARTA!!!')
+        
+        var numberCorrect = 0
+        
+        var answer1 = prompt('Is JavaScript a cool language? [y/n]')
+        var correctAnswer1 = 'y'
+        if (answer1 == correctAnswer1) {
+            // numberCorrect = numberCorrect + 1
+            numberCorrect += 1
+            // numberCorrect++
+            // ++numberCorrect
+        } else {
+            console.warn('The correct answer is [y].')
+        }
+        
+        var answer2 = prompt('Can a JavaScript variable name start with \'-\'? [y/n]')
+        var correctAnswer2 = 'n'
+        if (answer2 == correctAnswer2) {
+            numberCorrect += 1;
+        } else {
+            console.warn('The correct answer is [n].')
+        }
+        
+        var score = numberCorrect / 2 * 100
+        alert(`Your score is ${score}%.`)
+        
+        
+        
+        
+        var newVar
+        newVar = 7
+        newVar = 'hi'
+        newVar = null
+        header.innerHTML = `The type of newVar is: ${typeof newVar}`
+        
+        
+    </script>
+</body>
+</html>
