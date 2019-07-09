@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>
+        Guessing Game.
+    </h2>
+    <form>
+        <label for="input">
+            Guess:
+        </label>
+        <input type="text" id="input" />
+        <br />
+        <button id="submit">
+            Submit
+        </button>
+    </form>
+    <p id="output">
+        
+    </p>
+    
+    <script type="text/javascript">
+        let getUserGuess = function() {
+            let input = document.getElementById('input')
+            let guess = input.value
+            alert('guess is: ' + guess)
+        }
+        
+        let button = document.getElementById('submit')
+        button.addEventListener('click', getUserGuess)
+        
+        // TODO: Define other functions for guessing game HERE.
+        
+    </script>
+</body>
+</html>

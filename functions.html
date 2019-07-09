@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <script type="text/javascript">
+    
+        functionName('dog', 'WOOF!')
+        
+        function functionName(animal, bark) {
+            alert(`You executed functionName and passed in ${animal} that said ${bark}!`)
+        }
+        
+        var multiplierFunction = function(a, b) {
+            alert(`You executed multiplierFunction with ${a} x ${b} = ${a * b}`)
+            return a * b
+        }
+        
+        var product = multiplierFunction(3, 5)
+        alert('THE ANSWER IS ' + product)
+        
+        var arrowFunction = (a, b) => {
+            alert(`You executed arrowFunction with ${a} x ${b} = ${a * b}`)
+            return a * b
+        }
+        
+        arrowFunction(4, 7)
+        
+    </script>
+</body>
+</html>
