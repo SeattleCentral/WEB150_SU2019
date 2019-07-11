@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1 id="answer"></h1>
+    
+    <script type="text/javascript">
+        // Power Function
+        // For Input: 3, 3 ...e.g. 3^3
+        // Expected Output: 27
+        var powerFunction = function(base, exponent) {
+            var result = 1;
+            for (var i = 0; i < exponent; i++) {
+                result = result * base
+            }
+            console.log('The result is ' + result)
+            return result
+        }
+        
+        var html = ''
+        for (var i = 0; i <= 100; i++) {
+            var answer = powerFunction(2, i)
+            html += `<p>2^${i} = ${answer}</p>`
+        }
+        
+        var h1 = document.getElementById('answer')
+        h1.innerHTML = html
+    </script>
+</body>
+</html>
