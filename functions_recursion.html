@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1 id="answer"></h1>
+    
+    <script type="text/javascript">
+        // Power Function
+        // For Input: 3, 3 ...e.g. 3^3
+        // Expected Output: 27
+        var powerFunction = function(base, exponent) {
+            // 1st time: base = 2, exponent = 5
+            // 2nd time: base = 2, exponent = 4
+            // 3rd time: base = 2, exponent = 3
+            // 4th time: base = 2, exponent = 2
+            // 5th time: base = 2, exponent = 1
+            // 6th time: base = 2, exponent = 0
+            if (exponent === 0) {
+                // 2^0 = 1
+                return 1
+                // 6th return 1
+            } else {
+                return base * powerFunction(base, exponent - 1)
+                // 1st 2 * ... => 16 = 32
+                // 2nd 2 * ... => 8 = 16
+                // 3rd 2 * ... => 4 = 8
+                // 4th 2 * ... => 2 = 4
+                // 5th 2 * ... => 1 = 2
+            }
+        }
+        // "2^5 = 32"
+        let html = "2^5 = " + powerFunction(2, 5)
+        
+        var h1 = document.getElementById('answer')
+        h1.innerHTML = html
+    </script>
+</body>
+</html>
