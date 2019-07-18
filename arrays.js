@@ -1,13 +1,28 @@
-let racers = ['Samantha', 'Martha', 'Sally']
+let racers = []
 
-console.log(racers[0]) // "Samantha"
-console.log(racers[2])  // "Sally"
+racers.push('Margaret')
+racers.push('Sally')
+racers.push(5)
+// anonymous function
+racers.push(function(a, b) { return a + b })
+console.log(racers)
 
-console.log("All of the race participants")
-for (let racer of racers) {
-    console.log(racer)
-}
+console.log(racers[3](7, 77))
 
-for (let i = 0; i < racers.length; i++) {
-    let racer = racers[i]
-}
+let lastElement = racers.pop()
+console.log(racers)
+racers.pop()
+console.log(racers)
+
+let myTestArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+myTestArray.splice(2, 2)
+console.log(myTestArray)
+
+// console.log("All of the race participants")
+// for (let racer of racers) {
+//     console.log(racer)
+// }
+
+// for (let i = 0; i < racers.length; i++) {
+//     let racer = racers[i]
+// }
