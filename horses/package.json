@@ -4,12 +4,14 @@
   "description": "",
   "scripts": {
     "test": "webpack --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "dev": "webpack --watch --mode development"
   },
   "author": "Joshua Wedekind",
   "license": "MIT",
   "devDependencies": {
     "webpack": "^4.37.0",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
   }
 }

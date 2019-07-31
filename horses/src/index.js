@@ -1,4 +1,4 @@
-import Horse from './horse'
+import Horse from './horse_class'
 
 let seaBiscuit = new Horse('Sea Biscuit')
 let blackBeauty = new Horse('Black Beauty')
@@ -10,7 +10,9 @@ blackBeauty.gallup()
 
 let div = document.getElementById('content')
 div.innerHTML = `
-    Horsey ${seaBiscuit.name} is at position: ${seaBiscuit.position}
+    Horsey ${seaBiscuit.name} is at position: ${seaBiscuit.position} furlongs
     <br />
-    Horsey ${blackBeauty.name} is at position: ${blackBeauty.position}
+    Horsey ${blackBeauty.name} is at position: ${blackBeauty.position} furlongs
+    <br />
+    ${blackBeauty.draw()}
 `
