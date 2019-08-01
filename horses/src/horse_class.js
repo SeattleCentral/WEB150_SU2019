@@ -16,7 +16,7 @@ class Horse {
     draw() {
         const height = 40
         const width = 10 + this.position * 100
-        const backgroundColor = 'green'
+        const backgroundColor = 'purple'
         
         return `
             <div style="

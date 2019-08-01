@@ -5,7 +5,7 @@
   "scripts": {
     "test": "webpack --mode development",
     "build": "webpack --mode production",
-    "dev": "webpack --watch --mode development"
+    "dev": "webpack-dev-server"
   },
   "author": "Joshua Wedekind",
   "license": "MIT",
