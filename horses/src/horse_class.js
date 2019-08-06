@@ -13,9 +13,13 @@ class Horse {
         // this.position = this.position + ...
     }
     
+    reset() {
+        this.position = 0
+    }
+    
     draw() {
         const height = 40
-        const width = 10 + this.position * 100
+        const width = 10 + this.position * 50
         const backgroundColor = 'purple'
         
         return `
@@ -24,7 +28,7 @@ class Horse {
                 height: ${height}px;
                 width: ${width}px;
             ">
-                <span style="color: white">${this.position}</span>
+                <span style="color: white">🐎 ${this.name}</span>
             </div>
         `
     }
